@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 
 DATA_PATH = "data/corruptmnist"
 
+
 def corrupt_mnist() -> Tuple[torch.utils.data.Dataset, torch.utils.data.Dataset]:
     """Return train and test dataloaders for corrupt MNIST."""
     train_images, train_target = [], []
@@ -25,6 +26,8 @@ def corrupt_mnist() -> Tuple[torch.utils.data.Dataset, torch.utils.data.Dataset]
     test_set = torch.utils.data.TensorDataset(test_images, test_target)
 
     return train_set, test_set
+
+
 def show_image_and_target(images: torch.Tensor, target: torch.Tensor) -> None:
     """Plot images and their labels in a grid."""
     row_col = int(len(images) ** 0.5)

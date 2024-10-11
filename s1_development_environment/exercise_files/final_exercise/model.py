@@ -25,7 +25,8 @@ class MyAwesomeModel(nn.Module):
         x = self.dropout(x)
         x = self.fc1(x)
         return x
-    
+
+
 if __name__ == "__main__":
     model = MyAwesomeModel()
     print(f"Model architecture: {model}")

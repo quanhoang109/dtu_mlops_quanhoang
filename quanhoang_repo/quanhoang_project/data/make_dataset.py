@@ -19,8 +19,8 @@ def make_data(raw_dir: str, processed_dir: str):
     train_images = torch.cat(train_images)
     train_target = torch.cat(train_target)
 
-    test_images: torch.Tensor = torch.load(f"{raw_dir}/test_images.pt",weights_only=True)
-    test_target: torch.Tensor = torch.load(f"{raw_dir}/test_target.pt",weights_only=True)
+    test_images: torch.Tensor = torch.load(f"{raw_dir}/test_images.pt", weights_only=True)
+    test_target: torch.Tensor = torch.load(f"{raw_dir}/test_target.pt", weights_only=True)
 
     train_images = train_images.unsqueeze(1).float()
     test_images = test_images.unsqueeze(1).float()
