@@ -6,7 +6,7 @@ RUN apt update && \
     apt clean && rm -rf /var/lib/apt/lists/
 COPY requirements.txt requirements.txt
 COPY pyproject.toml pyproject.toml
-COPY <project-name>/ <project-name>/
+COPY quanhoang_repo/ quanhoang_repo/
 COPY data/ data/
 
 WORKDIR /
